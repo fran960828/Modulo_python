@@ -1,7 +1,5 @@
 import numpy as np
 
-import numpy as np
-
 # ==================================
 # Creación de arrays
 # ==================================
@@ -167,4 +165,17 @@ print(np.linalg.inv(A))
 vals, vecs = np.linalg.eig(A)
 print(vals)
 print(vecs)
+
+# ==================================
+# Funciones añadidas
+# ==================================
+# np.intersect1d
+    ##vnp.intersect1d(a, b) → devuelve los valores que están en ambos arrays, ordenados y sin duplicados.
+    ##return_indices=True → te da también la posición de esos valores en cada array.
+a = np.array([1,2,2,3])
+b = np.array([2,2,4])
+np.intersect1d(a,b)  # -> array([2])
+# Con return_indices=True -> indices de la primera aparición de 2 en cada array, en este caso, es el único numero que se repite
+
+
 
