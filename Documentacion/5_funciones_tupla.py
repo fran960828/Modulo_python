@@ -27,9 +27,6 @@ print(tupla.__len__())  # 5
 it = tupla.__iter__()
 print(next(it))  # 1
 
-# __reversed__: devuelve un iterador en orden inverso
-print(tuple(tupla.__reversed__()))  # (2, 4, 3, 2, 1)
-
 # __mul__: repetir tupla
 print(tupla.__mul__(2))  # (1, 2, 3, 4, 2, 1, 2, 3, 4, 2)
 
@@ -53,6 +50,9 @@ print(tupla.__sizeof__())  # depende del sistema
 # MÉTODOS NORMALES DE TUPLA
 # ==========================================
 
+# length: determinar la longitud de una tupla
+print('longitud de tupla:',len(tupla))
+
 # count: cuántas veces aparece un valor
 print(tupla.count(2))  # 2
 
@@ -64,6 +64,28 @@ try:
 except ValueError as e:
     print("Error:", e)
 
+#max or min: devuelve maximo y mínimo
+print(max(tupla),min(tupla))
+
+# reversed:revertir la tupla
+tuplaRevertida=tuple(reversed(tupla))
+print(tuplaRevertida)
+# sorted: ordenar tupla
+tuplaOrdenada=tuple(sorted(tupla))
+print(tuplaOrdenada)
+
+#zip: formar una tupla de tuplas -> entre tuplas de la misma longitud
+tupladoble=tuple(zip(tupla,otra_tupla))
+print(tupladoble)
+print(tupladoble[1][0])#->Método para acceder a una tupla doble
+
+#slicing en tuplas
+print(tupla[2:])
+print(tupladoble[1][1:])
+
+#Descompresión de tuplas
+entero_1,entero_2,entero_3=otra_tupla
+print(entero_1,entero_2,entero_3)
 # ==========================================
 # RESUMEN FINAL
 # ==========================================
