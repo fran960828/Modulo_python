@@ -137,3 +137,119 @@ except ImportError:
 # import pandas as pd
 #
 # import mimodulo
+'''
+mi_proyecto/
+│
+├── mi_proyecto/             # Paquete principal
+│   ├── __init__.py          # Convierte la carpeta en paquete
+│   ├── modulo1.py           # Módulo con funciones/clases
+│   ├── modulo2.py
+│   └── subpaquete/          # Subpaquete
+│       ├── __init__.py
+│       └── herramientas.py
+│
+├── tests/                   # Carpeta para pruebas (unit tests)
+│   └── test_modulo1.py
+│
+├── requirements.txt         # Lista de dependencias (pip freeze > requirements.txt)
+├── setup.py                 # Configuración si lo distribuyes como paquete
+├── README.md                # Documentación del proyecto
+└── main.py                  # Punto de entrada del programa
+
+'''
+# ====================================================
+# 📌 DOCUMENTACIÓN SOBRE ESTRUCTURA DE PROYECTOS PYTHON
+# ====================================================
+
+# ----------------------------------------------------
+# 1. Paquetes y __init__.py
+# ----------------------------------------------------
+# Un archivo __init__.py convierte una carpeta en "paquete".
+# Puede estar vacío, pero también se puede usar para inicializar.
+#
+# Ejemplo: en mi_proyecto/__init__.py
+# print("Paquete mi_proyecto cargado")
+
+# ----------------------------------------------------
+# 2. Importaciones absolutas (RECOMENDADO)
+# ----------------------------------------------------
+# Se refieren siempre desde el "raíz del proyecto".
+#
+# Ejemplo: en main.py
+# from mi_proyecto.modulo1 import funcion1
+
+# ----------------------------------------------------
+# 3. Importaciones relativas (usadas dentro de paquetes)
+# ----------------------------------------------------
+# Sirven cuando trabajamos dentro de un paquete.
+#
+# Ejemplo: en mi_proyecto/modulo2.py
+# from .modulo1 import funcion1      # Import relativo (mismo nivel)
+# from .subpaquete import herramientas  # Subpaquete
+
+# ----------------------------------------------------
+# 4. Ejemplo de módulo con funciones
+# ----------------------------------------------------
+# Archivo: mi_proyecto/modulo1.py
+#
+# def saludar(nombre):
+#     return f"Hola {nombre}"
+#
+# Archivo: main.py
+# from mi_proyecto.modulo1 import saludar
+# print(saludar("Ana"))
+
+# ----------------------------------------------------
+# 5. Subpaquetes
+# ----------------------------------------------------
+# Archivo: mi_proyecto/subpaquete/herramientas.py
+#
+# def multiplicar(a, b):
+#     return a * b
+#
+# Archivo: main.py
+# from mi_proyecto.subpaquete.herramientas import multiplicar
+# print(multiplicar(2, 3))
+
+# ----------------------------------------------------
+# 6. Uso de sys.path para pruebas rápidas
+# ----------------------------------------------------
+# En algunos casos, si el proyecto no está instalado,
+# podemos añadir la carpeta raíz al sys.path
+#
+import sys
+sys.path.append("mi_proyecto")  # ⚠️ Solo recomendable para pruebas rápidas
+
+# ----------------------------------------------------
+# 7. requirements.txt
+# ----------------------------------------------------
+# Se usa para listar dependencias de un proyecto.
+# Se genera con:
+#   pip freeze > requirements.txt
+# Y se instala con:
+#   pip install -r requirements.txt
+
+# ----------------------------------------------------
+# 8. setup.py (para empaquetar el proyecto)
+# ----------------------------------------------------
+# Ejemplo simple de setup.py:
+#
+# from setuptools import setup, find_packages
+#
+# setup(
+#     name="mi_proyecto",
+#     version="0.1",
+#     packages=find_packages(),
+#     install_requires=["numpy", "pandas"],
+# )
+
+# ----------------------------------------------------
+# 9. Buenas prácticas profesionales
+# ----------------------------------------------------
+# ✅ Usar entornos virtuales (venv o conda).
+# ✅ Mantener el código dividido en módulos y paquetes.
+# ✅ No abusar de importaciones relativas.
+# ✅ Documentar cada función con docstrings.
+# ✅ Usar carpetas tests/ para pruebas unitarias.
+# ✅ Incluir README.md con instrucciones de uso.
+# ✅ Usar requirements.txt o poetry/conda para gestionar dependencias.
