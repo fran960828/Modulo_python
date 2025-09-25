@@ -97,6 +97,39 @@ print(d4)  # {'a': 1, 'b': 20, 'c': 30}
 d4.update(d=40, e=50)
 print(d4)  # {'a': 1, 'b': 20, 'c': 30, 'd': 40, 'e': 50}
 
+# Eliminara pares clave valor diccionario o diccionario entero
+del d4['a']
+print(d4)
+
+# Convertir listas a diccionarios
+materias = ['Matemáticas', 'Física', 'Química']
+notas = [8, 7, 6]
+diccionario_notas = dict(zip(materias, notas))
+print(diccionario_notas)
+
+#Recorrer pares clave-valor
+for clave, valor in diccionario_notas.items():
+    print(f"{clave}: {valor}")
+
+#Ordenar diccionario por clave
+for clave in sorted(diccionario_notas.keys()):
+    print(f"{clave}")
+
+#Eliminar valores repetidos en un diccionario
+for values in set(diccionario_notas.values()):
+    print(f"{values}")
+
+# Anidamiento de diccionarios
+estudiantes = {
+    "001": {"nombre": "Ana", "edad": 20, "carrera": "Ingeniería"},
+    "002": {"nombre": "Luis", "edad": 22, "carrera": "Medicina"},
+    "003": {"nombre": "Marta", "edad": 21, "carrera": "Derecho"}
+}
+for id, info in estudiantes.items():
+    print(f"ID: {id}, Nombre: {info['nombre']}, Edad: {info['edad']}, Carrera: {info['carrera']}")
+
+
+
 # ==========================================
 # RESUMEN FINAL
 # ==========================================
