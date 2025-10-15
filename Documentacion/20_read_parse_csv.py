@@ -200,4 +200,104 @@ with open(nombre_archivo_dict_salida, 'w', newline='') as nuevo_archivo:
 
     print(f"Archivo '{nombre_archivo_dict_salida}' creado exitosamente (email omitido).")
 
-```
+# ---------------------------------------------------------------------------------------------------
+
+# Importamos el módulo CSV para facilitar el análisis (parsing) de archivos CSV.
+# Usar el módulo CSV es preferible a usar el método split() porque maneja 
+# correctamente comas dentro de los campos y saltos de línea.
+import csv 
+# Usamos io.StringIO para simular el archivo CSV, ya que no se tiene el archivo original.
+import io 
+
+# Contenido simulado del archivo patron.csv, incluyendo encabezados, 
+# la línea de 'bad data' y la línea de corte 'no reward'.
+csv_content = """first name,last name,email,pledge,lifetime,status,country,start
+A line explaining the people below this line are the ones who've said that they don't mind being listed on the website as a contributor,ignore,ignore,ignore,ignore,ignore,ignore,ignore
+John,Doe,johndoe@example.com,1,1,active,USA,2020-01-01
+Jane,Smith,janesmith@example.com,5,5,active,USA,2020-01-02
+Alice,Wonderland,alice@example.com,10,10,active,UK,2020-01-03
+Maggie,Jefferson,maggie@example.com,5,5,active,AU,2021-05-16
+no reward,This is the cutoff point where people below do not want the reward,ignore,ignore,ignore,ignore,ignore,ignore
+Cutoff,Person,cutoff@example.com,0,0,inactive,ES,2021-05-17
+""" # Nota: El archivo simulado contiene menos de 30 personas, a diferencia del original.
+
+# ----------------------------------------------------------------------
+# 1. Preparación de variables
+# ----------------------------------------------------------------------
+
+# Inicializamos una cadena vacía para la salida HTML final.
+html_output = ''
+
+# Creamos una lista vacía para almacenar los nombres de los contribuyentes que serán listados.
+names = []
+
+# ----------------------------------------------------------------------
+# 2. Apertura y Análisis del Archivo CSV (csv.DictReader)
+# ----------------------------------------------------------------------
+
+# Abrimos el archivo (simulado) en modo lectura ('r') utilizando un administrador de contexto.
+# Usamos io.StringIO(csv_content) en lugar de open('patron.csv', 'r') para la simulación.
+with io.StringIO(csv_content) as data_file:
+    
+    # Utilizamos csv.DictReader, el método preferido, ya que convierte cada fila de datos 
+    # en un diccionario donde los encabezados actúan como claves.
+    csv_data = csv.DictReader(data_file)
+    
+    # ----------------------------------------------------------------------
+    # 3. Omisión de datos no deseados
+    # ----------------------------------------------------------------------
+
+    # El DictReader automáticamente usa la primera fila como claves, por lo que los encabezados se omiten.
+    # Aún queda una línea de 'bad data' (descripción) que debe ser saltada.
+    
+    # Omitimos la primera línea de datos malos.
+    try:
+        next(csv_data) 
+    except StopIteration:
+        # Manejamos el caso de que el archivo estuviera vacío (aunque no es el caso del ejemplo).
+        pass
+
+    # ----------------------------------------------------------------------
+    # 4. Iteración y Captura de Nombres
+    # ----------------------------------------------------------------------
+
+    # Iteramos sobre cada contribuyente (item) en los datos.
+    for item in csv_data:
+        
+        # Verificamos si encontramos la línea de corte 'no reward'.
+        # Usando DictReader, accedemos al valor por la clave 'first name'.
+        if item['first name'] == 'no reward':
+            # Rompemos el bucle para no incluir los nombres posteriores.
+            break
+            
+        # Agregamos el nombre completo (Nombre + Apellido) a la lista 'names'.
+        # Se usa una F-string para el formateo, que es nuevo en Python 3.6+.
+        # Accedemos a los campos por sus claves de diccionario ('first name', 'last name').
+        names.append(f"{item['first name']} {item['last name']}")
+
+# ----------------------------------------------------------------------
+# 5. Generación del resultado HTML
+# ----------------------------------------------------------------------
+
+# 5a. Añadir el conteo de contribuyentes.
+# Usamos len(names) para obtener el número de personas en la lista.
+html_output += (f"<p>Supporters: {len(names)}</p>\n") 
+
+# 5b. Abrir la lista desordenada (<ul>).
+# Se añade un salto de línea (\n) para mejor legibilidad al imprimir.
+html_output += ('\n<ul>')
+
+# 5c. Iterar y añadir cada nombre como un ítem de lista (<li>).
+for name in names:
+    # Se utiliza F-string para insertar el nombre, y \n (salto de línea) y \t (tabulación) 
+    # para formatear el HTML para que sea legible.
+    html_output += (f"\n\t<li>{name}</li>")
+    
+# 5d. Cerrar la lista desordenada (</ul>).
+html_output += ('\n</ul>')
+
+# ----------------------------------------------------------------------
+# 6. Mostrar Resultado Final
+# ----------------------------------------------------------------------
+
+print(html_output)
