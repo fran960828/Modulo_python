@@ -1,0 +1,38 @@
+{
+  "departments": [
+    {
+      "name": "Sales",
+      "employees": [
+        {
+          "name": "Carlos",
+          "sales": 50
+        },
+        {
+          "name": "Julia",
+          "sales": 70
+        },
+        {
+          "name": "Javi",
+          "sales": 80
+        },
+        {
+          "name": "Fran",
+          "sales": 120
+        }
+      ]
+    },
+    {
+      "name": "Engineering",
+      "employees": [
+        {
+          "name": "Sofia",
+          "projects": 3
+        },
+        {
+          "name": "David",
+          "projects": 5
+        }
+      ]
+    }
+  ]
+}
