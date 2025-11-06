@@ -1,0 +1,64 @@
+{
+    "empresa": "TechNova Solutions",
+    "departamento": "Desarrollo de Software",
+    "ubicacion": "Madrid",
+    "empleados": [
+        {
+            "id": 102,
+            "nombre": "Carlos P\u00e9rez",
+            "edad": 35,
+            "puesto": "L\u00edder de Proyecto",
+            "salario": 4800.0,
+            "activo": true,
+            "skills": [
+                "Gesti\u00f3n",
+                "Scrum",
+                "Comunicaci\u00f3n"
+            ],
+            "email": "carlos.perez@technova.com"
+        },
+        {
+            "id": 103,
+            "nombre": "Sof\u00eda Torres",
+            "edad": 26,
+            "puesto": "Dise\u00f1adora UX/UI",
+            "salario": 2700.0,
+            "activo": false,
+            "skills": [
+                "Figma",
+                "Photoshop",
+                "HTML/CSS"
+            ],
+            "email": "sofia.torres@technova.com"
+        },
+        {
+            "id": 104,
+            "nombre": "David L\u00f3pez",
+            "edad": 31,
+            "puesto": "DevOps Engineer",
+            "salario": 4000.0,
+            "activo": true,
+            "skills": [
+                "AWS",
+                "Docker",
+                "Linux",
+                "CI/CD"
+            ],
+            "email": "david.lopez@technova.com"
+        },
+        {
+            "id": 105,
+            "nombre": "Francisco Navarro",
+            "edad": 29,
+            "puesto": "desarrollador full-stack",
+            "salario": 3500,
+            "activo": true,
+            "skills": [
+                "react",
+                "node",
+                "aws"
+            ],
+            "email": "fran96@hotmail.com"
+        }
+    ]
+}

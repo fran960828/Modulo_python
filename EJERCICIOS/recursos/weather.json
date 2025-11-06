@@ -1,0 +1,10 @@
+{
+  "city": "Madrid",
+  "forecast": [
+    {
+      "day": "Tuesday",
+      "temp": 22,
+      "rain": true
+    }
+  ]
+}
