@@ -5,3 +5,9 @@ aumentar progresivamente de dificultad hasta el punto de alcanzar un uso profesi
 Genera el número de ejercicios que consideres necesario para alcanzar un buen nivel de dominio
 
 '''
+
+'''
+Documenta el contenido del video realizando un explicación a detalle cada uno de los ejemplos en forma de comentario tipo py y
+ luego poniendo el ejemplo en formato ejecutable. Las explicaciones deben ir dirigidas a un público principiante y todo debe ir
+   en formato py
+'''
