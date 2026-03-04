@@ -1,20 +1,12 @@
 rol: Experto en django consulta: Haz una documentación para una persona principiante con una explicación en forma de comentario al inicio y tras la explicación emplea un ejemplo sencillo para que quede más claro los siguientes conceptos:
 
-- Explicación y creación de usuarios, indicando si es activo,staff o superusuario.
-- Explicación y asignación de permisos sobre ver,actualizar,modificar y eliminar registros de un modelo.
-- Explicación y creación de grupos con asignación de permisos e incorporación de usuarios.
-- Explicación y uso de python manage.py help.
-- Explicación y pasos de instalación de django-grapelli.
-- Explicación y pasos de instalación de django-debug-toolbar
-- Explicación y uso de las herramientas más importantes de django-debug-toolbar.
-- Explicación y pasos de instalación de django-extensions.
-- Explicación y uso de los comandos shell-plus,run-script,generate-password, graph model,admin-generator.
-- Explicación y pasos de instalación de django-import-export
-- Explicación y uso de django-import-export.
-- Explicación y pasos de instalación de django-simple-history
-- Explicación y uso de django-simple-history.
-- Explicación sobre django suite
-
+- Explicación y uso de extends en templates para no repetir código.
+- Explicación y uso de blocks en las partes que se modifican en los distintos templates.
+- Instalación de extensiones de VScode: django de baptiste darthenay y django de Roberth Solis.
+- Explicación y uso de variables y filtros. Ej: renderizar una fecha y modificar el formato con filtros.
+- Enumeración de los filtros más empleados en el ámbito profesional y ejemplos.
+- Explicación y uso de simple_tag e inclusion_tag.
+- Explicación y uso de estructuras de control de flujo como for, if, with,include.
 
 Especificaciones:-La documentación debe contener la explicación detallada de todo lo necesario para el uso de los conceptos a nivel profesional-Los ejemplos deben estar explicados con comentarios sobre lo que hacen en cada paso -El formato de entrega será markdown. Verificación:Revisa el contenido de la consulta para obtener el resultado deseado, recuerda que lo más importante es que los ejemplos estén bien explicados , tomate el tiempo necesario para obtener el mejor resultado.
 
