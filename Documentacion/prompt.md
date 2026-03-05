@@ -4,10 +4,11 @@ rol: Experto en django consulta: Haz una documentación para una persona princip
 - Explicación y uso de formularios con una petición de tipo get que nos pasa información al request, con dicha información usamos una query en view usando models
   para obtener la información de la BD y mostrarla por medio del template(Aqui no usaremos clases sino que empleamos directamente request, es para ver como funciona por dentro, indica por que se trata de una mala práctica).
 - Explicación del uso de if y for para manejar la información que pasamos en el context al template.
-- Explicación y uso de clases que heredan de form, en la vista instanciamos la clase y le pasamos el request get, despues obtenemos el valor de campo con instancia.data['key'] lo cual pasamos a las queries y pasamos la instancia y el resultado de las queries a context,
+- Explicación y uso de clases que heredan de form para peticiones get, en la vista instanciamos la clase y le pasamos el request get, despues obtenemos el valor de campo con instancia.data['key'] lo cual pasamos a las queries y pasamos la instancia y el resultado de las queries a context,
   establece las ventajas de este método con respecto al anterior.
 - Explicación del metodo as_p a la instancia del formulario.
 - Explicación y uso de csrf token para peticiones tipo POST.
+- Explicación y uso de clases que heredan de form para peticiones POST, en la vista instanciamos la clase y le pasamos el request.get, después lo validamos con isValid() a partir de una serie de funciones que le pasamos en el propio modelo y si pasa limpiamos los datos con cleanedData y creamos un context que contendrá la instancia del formulario y un booleano que no servirá para indicar que el envio del formulario ha tenido exito
 
   Especificaciones:-La documentación debe contener la explicación detallada de todo lo necesario para el uso de los conceptos a nivel profesional-Los ejemplos deben estar explicados con comentarios sobre lo que hacen en cada paso -El formato de entrega será markdown. Verificación:Revisa el contenido de la consulta para obtener el resultado deseado, recuerda que lo más importante es que los ejemplos estén bien explicados , tomate el tiempo necesario para obtener el mejor resultado.
 

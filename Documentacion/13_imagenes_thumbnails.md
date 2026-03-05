@@ -79,10 +79,10 @@ class Articulo(models.Model):
 ```
 
 **Limpieza de Caché:**
-Si cambias los tamaños en `settings.py`, las imágenes viejas no se actualizarán solas. Debes borrar las miniaturas generadas para que se vuelvan a crear con el nuevo tamaño:
+Si cambias los tamaños en `settings.py`, las imágenes viejas no se actualizarán solas. Debes borrar las miniaturas generadas para que se vuelvan a crear con el nuevo tamaño, para ello después de model debe indicar el nombre de la app donde se encuentra el modelo, el nombre del modelo, el alias del tamaño que se encuentra en settings y el nombre del campo afectado que es donde ponemos el ImageField:
 
 ```bash
-python manage.py delete_thumbnails
+python manage.py delete_thumbnails --model=app.Model --size=small --field=main_image 
 
 ```
 
