@@ -24,7 +24,7 @@ EMAIL_PORT = 587
 # Tu correo de Conquer Blocks
 EMAIL_HOST_USER = 'tu-usuario@gmail.com'
 # La clave de 16 caracteres generada en Google
-EMAIL_HOST_PASSWORD = 'abcd efgh ijkl mnop'
+EMAIL_HOST_PASSWORD = env.password
 # Activamos el cifrado de seguridad
 EMAIL_USE_TLS = True
 # Dirección por defecto que aparecerá como remitente
