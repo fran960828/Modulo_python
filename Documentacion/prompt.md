@@ -1,6 +1,10 @@
 rol: Experto en django consulta: Haz una documentación para una persona principiante con una explicación en forma de comentario al inicio y tras la explicación emplea un ejemplo sencillo para que quede más claro los siguientes conceptos:
 
-- 
+- Explicación detallada de la internacionalización i18n.
+- Explicación de la configuración necesaria en settings para la internacionalización de proyectos.
+- Explicación y uso del tags trans y blocktrans para indicar que un determinado contenido es traducible en estatico y dinamico respectivamente.
+- Explicación y uso de gettext y gettext_lazy para aplicarlas en nuestros modelos y vistas.
+- Explicación y uso de django-admin makemessages -l
 
 Especificaciones:-La documentación debe contener la explicación detallada de todo lo necesario para el uso de los conceptos a nivel profesional-Los ejemplos deben estar explicados con comentarios sobre lo que hacen en cada paso -El formato de entrega será markdown. Verificación:Revisa el contenido de la consulta para obtener el resultado deseado, recuerda que lo más importante es que los ejemplos estén bien explicados , tomate el tiempo necesario para obtener el mejor resultado.
 
