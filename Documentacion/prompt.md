@@ -2,9 +2,17 @@ rol: Experto en django consulta: Haz una documentación para una persona princip
 
 - Explicación detallada de la internacionalización i18n.
 - Explicación de la configuración necesaria en settings para la internacionalización de proyectos.
-- Explicación y uso del tags trans y blocktrans para indicar que un determinado contenido es traducible en estatico y dinamico respectivamente.
+- Explicación y uso del tags trans y blocktrans para indicar que un determinado contenido es traducible en estatico y dinamico respectivamente, cargando además el modulo i18n.
 - Explicación y uso de gettext y gettext_lazy para aplicarlas en nuestros modelos y vistas.
 - Explicación y uso de django-admin makemessages -l
+- Explicación e instalación de gettext para evitar problemas al ejecutar makemessages.
+- Explicación e instalación de Poedit.
+- Explicación y uso de Poedit.
+- Explicación del flujo a seguir si mi proyecto esta en español para obtener traducciones al ingles desde el uso de django-admin makemessages hasta completar el archivo .po.
+- Explicación e instalación de Django Rosseta así como sus principales configuraciones en el archivo settings.
+- Explicación y uso de django rosseta para cambiar de un idioma a otro a través de classBaseView y un formulario con select en el template que corresponda, además, establecer la configuración necesaria para mantener dicho idioma si refrescamos la pagina.
+
+
 
 Especificaciones:-La documentación debe contener la explicación detallada de todo lo necesario para el uso de los conceptos a nivel profesional-Los ejemplos deben estar explicados con comentarios sobre lo que hacen en cada paso -El formato de entrega será markdown. Verificación:Revisa el contenido de la consulta para obtener el resultado deseado, recuerda que lo más importante es que los ejemplos estén bien explicados , tomate el tiempo necesario para obtener el mejor resultado.
 
