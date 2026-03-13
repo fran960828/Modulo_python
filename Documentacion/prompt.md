@@ -1,13 +1,10 @@
 rol: Experto en django consulta: Haz una documentación para una persona principiante con una explicación en forma de comentario al inicio y tras la explicación emplea un ejemplo sencillo para que quede más claro los siguientes conceptos:
 
-- Explicación detallada de dumpdata y loaddata.
-- Explicación detallada de los formatos usados como json,xml,yaml.
-- Explicación de los usos principales de dumpdata y loaddata como migración de BD, back-up, restauración de datos y dime si se te ocurren más.
-- Explicación y uso de fixtures para datos iniciales de la aplicación.
-- Explicación y uso de la sintaxis básica de dumpdata: python manage.py dumpdata --format=json --indent=4 --output=backup.json
-- Explicación sobre como migrar la base de datos de sqlLite a mysql.
-- Explicación e instalación de mysqlclient.
-- Explicación y uso de la sintaxis básica de loaddata.
+- Explicación detallada e instalación de django crispy forms
+- Explicación e instalación de crispy-bootstrap5.
+- Explicación de las configuraciones a llevar a cabo en settings para bootstrap5.
+- Explicación y uso de load crispy-form y uso de crispy en formularios.
+- Explicación y uso de clases de bootstrap en los formularios.
 
 Especificaciones:-La documentación debe contener la explicación detallada de todo lo necesario para el uso de los conceptos a nivel profesional-Los ejemplos deben estar explicados con comentarios sobre lo que hacen en cada paso -El formato de entrega será markdown. Verificación:Revisa el contenido de la consulta para obtener el resultado deseado, recuerda que lo más importante es que los ejemplos estén bien explicados , tomate el tiempo necesario para obtener el mejor resultado.
 
