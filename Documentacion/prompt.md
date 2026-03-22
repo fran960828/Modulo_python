@@ -3,7 +3,7 @@ rol: Experto en django consulta: Haz una documentación para una persona princip
 - Explicación detallada e instalación de django crispy forms
 - Explicación e instalación de crispy-bootstrap5.
 - Explicación de las configuraciones a llevar a cabo en settings para bootstrap5.
-- Explicación y uso de load crispy-form y uso de crispy en formularios.
+- Explicación y yuso de load crispy-form y uso de crispy en formularios.
 - Explicación y uso de clases de bootstrap en los formularios.
 
 Especificaciones:-La documentación debe contener la explicación detallada de todo lo necesario para el uso de los conceptos a nivel profesional-Los ejemplos deben estar explicados con comentarios sobre lo que hacen en cada paso -El formato de entrega será markdown. Verificación:Revisa el contenido de la consulta para obtener el resultado deseado, recuerda que lo más importante es que los ejemplos estén bien explicados , tomate el tiempo necesario para obtener el mejor resultado.
@@ -15,3 +15,5 @@ genera un serie de ejercicios para practicar todos estos conceptos, estos ejerci
 Documenta el contenido del video realizando un explicación a detalle cada uno de los ejemplos en forma de comentario tipo py y
 luego poniendo el ejemplo en formato ejecutable. Las explicaciones deben ir dirigidas a un público principiante y todo debe ir
 en formato py
+
+A continuación te paso la guia completa sobre CI avanzado, quiero que la estructures siguiendo el mismo formato y le adiciones todos los comandos que hemos visto por muy simples y obvios que parezcan explicando para que sirven cada uno de ellos, al final lo que quiero es tener un paso a paso muy claro que me sirva de base de proyectos.
